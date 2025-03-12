@@ -1,0 +1,60 @@
+class Student:
+    def __init__(self, name, age, average_score):
+        self.name = name
+        self.age = age
+        self.average_score = average_score
+
+    # Методы для установки значений свойств
+    def set_name(self, name):
+        self.name = name
+
+    def set_age(self, age):
+        self.age = age
+
+    def set_average_score(self, average_score):
+        self.average_score = average_score
+
+    # Методы для получения значений свойств
+    def get_name(self):
+        return self.name
+
+    def get_age(self):
+        return self.age
+
+    def get_average_score(self):
+        return self.average_score
+
+    # Метод для вывода информации о студенте
+    def display_info(self):
+        print(f"Имя: {self.name}, Возраст: {self.age}, Средний балл: {self.average_score}")
+
+    # Метод для подсчета оценки студента
+    def evaluate(self):
+        if self.average_score > 8:
+            return "Отлично"
+        elif 6 <= self.average_score <= 8:
+            return "Хорошо"
+        elif 4 <= self.average_score < 6:
+            return "Удовлетворительно"
+        else:
+            return "Неудовлетворительно"
+
+# Создание нескольких объектов класса "Студент"
+student1 = Student("Иван Иванов", 20, 8.5)
+student2 = Student("Петр Петров", 22, 6.7)
+student3 = Student("Анна Сидорова", 21, 9.2)
+
+# Демонстрация использования объектов
+student1.display_info()
+print(f"Оценка: {student1.evaluate()}")
+
+student2.display_info()
+print(f"Оценка: {student2.evaluate()}")
+
+student3.display_info()
+print(f"Оценка: {student3.evaluate()}")
+
+# Установка новых значений свойств
+student1.set_average_score(7.8)
+student1.display_info()
+print(f"Оценка: {student1.evaluate()}")
